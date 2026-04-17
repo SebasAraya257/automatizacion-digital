@@ -42,6 +42,3 @@ Hola, soy Sebastián. Me dedico a desarrollar soluciones simples y efectivas uti
 
 Cada negocio es único, por eso realizo cotizaciones personalizadas para ajustarme a tu realidad.
 
-© 2023 Sebastián Araya. Todos los derechos reservados.
-
-Diseñado para automatizar el éxito.
