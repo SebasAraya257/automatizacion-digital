@@ -1,114 +1,199 @@
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sebastián Araya | Automatización Digital</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sebastián Araya | Automatización Digital</title>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: #e2e8f0;
-}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
 
-.container {
-  width: 90%;
-  max-width: 900px;
-  margin: 40px auto;
-}
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
 
-h1 {
-  font-size: 40px;
-}
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #38bdf8;
+    }
 
-h2 {
-  color: #38bdf8;
-}
+    h2 {
+      color: #38bdf8;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
 
-.card {
-  background: #020617;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-}
+    .subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #94a3b8;
+    }
 
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background: #25D366;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-</style>
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      border: 1px solid #334155;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.2);
+    }
+
+    .card p {
+      margin-bottom: 12px;
+    }
+
+    .features {
+      margin: 15px 0;
+      line-height: 1.8;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      color: #22c55e;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 24px;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #20ba5a;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      .container {
+        width: 95%;
+        padding: 10px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+  <div class="container">
 
-<h1>Sebastián Araya</h1>
-<p>Automatizo procesos digitales para ahorrar tiempo y mejorar tu negocio</p>
+    <h1>Sebastián Araya</h1>
+    <p class="subtitle">Automatizo procesos digitales para ahorrar tiempo y mejorar tu negocio</p>
 
-<div class="card">
-<h2>¿En qué te puedo ayudar?</h2>
-<p>
-Si pierdes tiempo respondiendo mensajes, organizando pedidos o agendando clientes,
-puedo ayudarte a automatizar esos procesos.
-</p>
-</div>
+    <div class="card">
+      <h2>¿En qué te puedo ayudar?</h2>
+      <p>
+        Si pierdes tiempo respondiendo mensajes, organizando pedidos o agendando clientes,
+        puedo ayudarte a automatizar esos procesos.
+      </p>
+    </div>
 
-<div class="card">
-<h2>💬 Automatización de WhatsApp</h2>
-<p>Responde mensajes automáticamente y muestra tu catálogo sin esfuerzo.</p>
-<p>✔ Respuestas automáticas<br>✔ Catálogo integrado<br>✔ Atención rápida</p>
-<p><strong>Desde $25.000 a $40.000 CLP</strong></p>
-<a class="btn" href="https://wa.me/56954330427?text=Hola,%20quiero%20información%20sobre%20automatización">
-  Contactar por WhatsApp
-</a>
-</div>
+    <div class="card">
+      <h2>💬 Automatización de WhatsApp</h2>
+      <p>Responde mensajes automáticamente y muestra tu catálogo sin esfuerzo.</p>
+      <div class="features">
+        ✔ Respuestas automáticas<br>
+        ✔ Catálogo integrado<br>
+        ✔ Atención rápida
+      </div>
+      <p class="price">Desde $25.000 a $40.000 CLP</p>
+      <a class="btn" href="https://wa.me/56954330427?text=Hola,%20quiero%20información%20sobre%20automatización">
+        Contactar por WhatsApp
+      </a>
+    </div>
 
-<div class="card">
-<h2>📅 Agenda automática</h2>
-<p>Organiza citas y envía recordatorios sin hacerlo manualmente.</p>
-<p>✔ Agenda automática<br>✔ Recordatorios<br>✔ Menos olvidos</p>
-<p><strong>Desde $40.000 a $80.000 CLP</strong></p>
-<a class="btn" href="https://wa.me/56954330427">Consultar</a>
-</div>
+    <div class="card">
+      <h2>📅 Agenda automática</h2>
+      <p>Organiza citas y envía recordatorios sin hacerlo manualmente.</p>
+      <div class="features">
+        ✔ Agenda automática<br>
+        ✔ Recordatorios<br>
+        ✔ Menos olvidos
+      </div>
+      <p class="price">Desde $40.000 a $80.000 CLP</p>
+      <a class="btn" href="https://wa.me/56954330427?text=Hola,%20quiero%20información%20sobre%20agenda%20automática">
+        Consultar
+      </a>
+    </div>
 
-<div class="card">
-<h2>🛒 Pedidos automatizados</h2>
-<p>Recibe pedidos sin responder uno por uno.</p>
-<p>✔ Formularios<br>✔ Confirmación automática<br>✔ Organización</p>
-<p><strong>Desde $35.000 a $60.000 CLP</strong></p>
-<a class="btn" href="https://wa.me/56954330427">Consultar</a>
-</div>
+    <div class="card">
+      <h2>🛒 Pedidos automatizados</h2>
+      <p>Recibe pedidos sin responder uno por uno.</p>
+      <div class="features">
+        ✔ Formularios<br>
+        ✔ Confirmación automática<br>
+        ✔ Organización
+      </div>
+      <p class="price">Desde $35.000 a $60.000 CLP</p>
+      <a class="btn" href="https://wa.me/56954330427?text=Hola,%20quiero%20información%20sobre%20pedidos%20automatizados">
+        Consultar
+      </a>
+    </div>
 
-<div class="card">
-<h2>🤖 Chatbots simples</h2>
-<p>Automatiza respuestas frecuentes y horarios.</p>
-<p><strong>Precio según necesidad</strong></p>
-<a class="btn" href="https://wa.me/56954330427">Consultar</a>
-</div>
+    <div class="card">
+      <h2>🤖 Chatbots simples</h2>
+      <p>Automatiza respuestas frecuentes y horarios.</p>
+      <p class="price">Precio según necesidad</p>
+      <a class="btn" href="https://wa.me/56954330427?text=Hola,%20quiero%20información%20sobre%20chatbots">
+        Consultar
+      </a>
+    </div>
 
-<div class="card">
-<h2>💳 Formas de pago</h2>
-<p>Puedes pagar:</p>
-<p>✔ Pago completo<br>✔ Pago en 2 cuotas</p>
-</div>
+    <div class="card">
+      <h2>💳 Formas de pago</h2>
+      <p>Puedes pagar:</p>
+      <div class="features">
+        ✔ Pago completo<br>
+        ✔ Pago en 2 cuotas
+      </div>
+    </div>
 
-<div class="card">
-<h2>📌 Sobre mí</h2>
-<p>
-Desarrollo soluciones simples y efectivas utilizando automatización digital,
-enfocado en resolver problemas reales de tiempo y organización.
-</p>
-</div>
+    <div class="card">
+      <h2>📌 Sobre mí</h2>
+      <p>
+        Desarrollo soluciones simples y efectivas utilizando automatización digital,
+        enfocado en resolver problemas reales de tiempo y organización.
+      </p>
+    </div>
 
-</div>
+  </div>
 
-</body>
-</html>
+
