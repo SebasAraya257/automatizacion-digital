@@ -34,7 +34,6 @@
       background-color: var(--bg-color);
       color: var(--text-primary);
       line-height: 1.6;
-      scroll-behavior: smooth;
     }
 
     .container {
@@ -63,7 +62,23 @@
       font-size: 1.25rem;
       color: var(--text-secondary);
       max-width: 600px;
-      margin: 0 auto 40px;
+      margin: 0 auto 20px;
+    }
+
+    .cta-main {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 14px 25px;
+      background: var(--accent);
+      border-radius: 10px;
+      color: #000;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .cta-main:hover {
+      transform: scale(1.05);
     }
 
     .intro-card {
@@ -88,34 +103,14 @@
       padding: 30px;
       border-radius: 16px;
       border: 1px solid var(--border);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: 0.3s;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: var(--accent);
-      opacity: 0;
-      transition: opacity 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+      transform: translateY(-6px);
       border-color: var(--accent);
-    }
-
-    .card:hover::before {
-      opacity: 1;
     }
 
     .card-icon {
@@ -127,10 +122,6 @@
     h2 {
       font-size: 1.5rem;
       margin-bottom: 15px;
-      color: var(--text-primary);
-      display: flex;
-      align-items: center;
-      gap: 10px;
     }
 
     .card p {
@@ -149,36 +140,24 @@
     .features li {
       margin-bottom: 10px;
       color: #cbd5e1;
-      display: flex;
-      align-items: center;
-      gap: 10px;
       font-size: 0.9rem;
-    }
-
-    .features li i {
-      color: var(--whatsapp);
-      font-size: 0.8rem;
     }
 
     .btn {
       display: inline-flex;
-      align-items: center;
       justify-content: center;
-      width: 100%;
-      padding: 14px 20px;
+      padding: 14px;
       background: var(--whatsapp);
       color: white;
       text-decoration: none;
       border-radius: 10px;
       font-weight: 600;
-      transition: all 0.3s ease;
-      gap: 10px;
+      transition: 0.3s;
       margin-top: auto;
     }
 
     .btn:hover {
       background: var(--whatsapp-hover);
-      transform: scale(1.02);
     }
 
     .info-section {
@@ -188,10 +167,9 @@
       margin-bottom: 60px;
     }
 
-    @media (max-width: 768px) {
-      h1 { font-size: 2.2rem; }
-      .info-section { grid-template-columns: 1fr; }
-      .container { width: 95%; }
+    .highlight {
+      color: var(--accent);
+      font-weight: 600;
     }
 
     footer {
@@ -201,135 +179,119 @@
       color: var(--text-secondary);
       font-size: 0.9rem;
     }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2rem; }
+      .info-section { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <div class="container">
-      <h1>Sebastián Araya</h1>
-      <p class="subtitle">Automatización Digital para negocios que quieren crecer.</p>
-      
-      <div class="intro-card">
-        <h2><i class="fa-solid fa-magnifying-glass-chart"></i> ¿En qué te puedo ayudar hoy?</h2>
-        <p style="margin-bottom: 0;">
-          Si pierdes tiempo respondiendo mensajes, organizando pedidos o agendando clientes manualmente,
-          tengo la solución para recuperar tus horas.
-        </p>
-      </div>
-    </div>
-  </header>
+<header>
+  <div class="container">
+    <h1>Sebastián Araya</h1>
+    <p class="subtitle">
+      Automatización digital para ahorrar tiempo, organizar tu negocio y aumentar tus ventas.
+    </p>
 
-  <main class="container">
-    
-    <div class="services-grid">
+    <a class="cta-main" href="https://wa.me/56954330427?text=Hola,%20quiero%20información">
+      Hablar por WhatsApp
+    </a>
 
-      <div class="card">
-        <div>
-          <div class="card-icon"><i class="fa-brands fa-whatsapp"></i></div>
-          <h2>Automatización WhatsApp</h2>
-          <p>Responde mensajes 24/7 y muestra tu catálogo de productos o servicios sin tocar el celular.</p>
-          <ul class="features">
-            <li><i class="fa-solid fa-check"></i> Respuestas automáticas</li>
-            <li><i class="fa-solid fa-check"></i> Catálogo integrado</li>
-            <li><i class="fa-solid fa-check"></i> Atención inmediata</li>
-          </ul>
-        </div>
-        <div>
-          <a class="btn" href="https://wa.me/56954330427?text=Hola,%20quiero%20cotizar%20automatización%20de%20WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i> Cotizar ahora
-          </a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div>
-          <div class="card-icon"><i class="fa-regular fa-calendar-check"></i></div>
-          <h2>Agenda Automática</h2>
-          <p>Deja que tus clientes agenden sus citas y tú solo recibe las notificaciones.</p>
-          <ul class="features">
-            <li><i class="fa-solid fa-check"></i> Agenda 24/7</li>
-            <li><i class="fa-solid fa-check"></i> Recordatorios automáticos</li>
-            <li><i class="fa-solid fa-check"></i> Sincronización</li>
-          </ul>
-        </div>
-        <div>
-          <a class="btn" href="https://wa.me/56954330427?text=Hola,%20quiero%20cotizar%20una%20agenda%20automática">
-            <i class="fa-brands fa-whatsapp"></i> Consultar Agenda
-          </a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div>
-          <div class="card-icon"><i class="fa-solid fa-cart-shopping"></i></div>
-          <h2>Pedidos Automatizados</h2>
-          <p>Recibe pedidos organizados en una hoja de cálculo o correo automáticamente.</p>
-          <ul class="features">
-            <li><i class="fa-solid fa-check"></i> Formularios web</li>
-            <li><i class="fa-solid fa-check"></i> Confirmación al cliente</li>
-            <li><i class="fa-solid fa-check"></i> Control de stock</li>
-          </ul>
-        </div>
-        <div>
-          <a class="btn" href="https://wa.me/56954330427?text=Hola,%20quiero%20cotizar%20sistema%20de%20pedidos">
-            <i class="fa-brands fa-whatsapp"></i> Ver soluciones
-          </a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div>
-          <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
-          <h2>Chatbots Inteligentes</h2>
-          <p>Agentes virtuales que contestan preguntas frecuentes y derivan ventas complejas.</p>
-          <ul class="features">
-            <li><i class="fa-solid fa-check"></i> IA Conversacional</li>
-            <li><i class="fa-solid fa-check"></i> Derivación a humanos</li>
-          </ul>
-        </div>
-        <div>
-          <a class="btn" href="https://wa.me/56954330427?text=Hola,%20quiero%20información%20sobre%20chatbots">
-            <i class="fa-brands fa-whatsapp"></i> Cotizar Chatbot
-          </a>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="info-section">
-      <div class="card">
-        <h2><i class="fa-solid fa-credit-card"></i> Medios de Pago</h2>
-        <p style="margin-top:15px;">Facilidades para empezar tu proyecto:</p>
-        <ul class="features">
-          <li><i class="fa-solid fa-money-bill"></i> Pago completo</li>
-          <li><i class="fa-solid fa-hand-holding-dollar"></i> Pago en 2 cuotas</li>
-          <li><i class="fa-solid fa-file-invoice"></i> Factura si corresponde</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2><i class="fa-solid fa-user-astronaut"></i> Sobre Mí</h2>
-        <p style="margin-top:15px;">
-          Hola, soy Sebastián. Me dedico a desarrollar soluciones simples y efectivas utilizando herramientas de automatización digital.
-        </p>
-        <p style="margin-top:10px;">
-          Cada negocio es único, por eso realizo <strong>cotizaciones personalizadas</strong> para ajustarme a tu realidad.
-        </p>
-      </div>
-    </div>
-
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 Sebastián Araya. Todos los derechos reservados.</p>
-      <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.6;">
-        Diseñado para automatizar el éxito.
+    <div class="intro-card">
+      <h2>¿Qué problema soluciono?</h2>
+      <p>
+        Si pierdes tiempo respondiendo mensajes, organizando pedidos o coordinando clientes manualmente,
+        puedo automatizar ese proceso para que funcione por ti 24/7.
       </p>
     </div>
-  </footer>
+  </div>
+</header>
+
+<main class="container">
+
+<div class="services-grid">
+
+<div class="card">
+  <div class="card-icon"><i class="fa-brands fa-whatsapp"></i></div>
+  <h2>Automatización WhatsApp</h2>
+  <p>Respuestas automáticas y catálogo sin intervención manual.</p>
+  <ul class="features">
+    <li>Atención 24/7</li>
+    <li>Respuestas inteligentes</li>
+    <li>Captación de clientes</li>
+  </ul>
+  <a class="btn" href="https://wa.me/56954330427">Cotizar</a>
+</div>
+
+<div class="card">
+  <div class="card-icon"><i class="fa-regular fa-calendar-check"></i></div>
+  <h2>Agenda Automática</h2>
+  <p>Clientes agendan solos, tú solo recibes confirmaciones.</p>
+  <ul class="features">
+    <li>Agenda online</li>
+    <li>Recordatorios</li>
+    <li>Sin errores humanos</li>
+  </ul>
+  <a class="btn" href="https://wa.me/56954330427">Consultar</a>
+</div>
+
+<div class="card">
+  <div class="card-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+  <h2>Pedidos Automatizados</h2>
+  <p>Pedidos organizados automáticamente sin desorden.</p>
+  <ul class="features">
+    <li>Formularios</li>
+    <li>Confirmación automática</li>
+    <li>Control básico</li>
+  </ul>
+  <a class="btn" href="https://wa.me/56954330427">Ver</a>
+</div>
+
+</div>
+
+<div class="info-section">
+
+<div class="card">
+  <h2>💳 Medios de Pago</h2>
+  <p class="highlight">Trabajo con modalidad segura para ambas partes:</p>
+  <ul class="features">
+    <li>50% al iniciar el proyecto</li>
+    <li>50% al finalizar</li>
+    <li>Transferencia (Cuenta RUT)</li>
+    <li>PayPal (clientes internacionales)</li>
+    <li>Efectivo (casos puntuales)</li>
+  </ul>
+  <p style="margin-top:10px;">
+    Esto asegura compromiso mutuo y desarrollo sin riesgos.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Sobre mí</h2>
+  <p>
+    Desarrollo soluciones simples, funcionales y enfocadas en resultados reales.
+  </p>
+  <p>
+    Cada proyecto se adapta a lo que tu negocio necesita, sin complicaciones innecesarias.
+  </p>
+  <p class="highlight">
+    Trabajo directo contigo, sin intermediarios.
+  </p>
+</div>
+
+</div>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Sebastián Araya</p>
+    <p style="opacity:0.6;">Automatización que genera resultados</p>
+  </div>
+</footer>
 
 </body>
 </html>
